@@ -14,5 +14,5 @@ class PreProcessor(object):
         self.df.domain = self.df.domain.str.strip()
 
         self.df.dropna(subset=["domain"], axis=0, inplace=True)
-        
+        print(self.df)
         self.df.reset_index(inplace=True)
