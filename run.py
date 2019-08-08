@@ -16,5 +16,6 @@ def load_dataset(fname):
 
 
 def start_training():
+    # Load the entire dataset in the memory, since it is a small dataset we can do it.
+    # If the dataset is huge, we have to optimize the way we load dataset in memory
     df = load_dataset(fname='{}/dga-dataset.txt'.format(DATA_DIR))
-    print(df)
