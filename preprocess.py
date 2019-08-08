@@ -10,4 +10,6 @@ class PreProcessor(object):
         self.df.is_dga = self.df.is_dga.str.lower()
 
         self.df.is_dga = self.df.is_dga.apply(lambda x: x[0] == "d")
+        self.df.domain = self.df.domain.str.lower()
+        self.df.domain = self.df.domain.str.strip()
         self.df.reset_index(inplace=True)
