@@ -8,3 +8,5 @@ class PreProcessor(object):
     def clean_labels(self):
         self.df.dropna(subset=['is_dga'], inplace=True)
         self.df.is_dga = self.df.is_dga.str.lower()
+
+        self.df.is_dga = self.df.is_dga.apply(lambda x: x[0] == "d")
